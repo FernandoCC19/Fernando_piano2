@@ -1,5 +1,5 @@
 Flow report for Fernando_piano2
-Mon May 26 14:21:26 2025
+Tue May 27 13:29:59 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,22 +41,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Mon May 26 14:21:26 2025      ;
+; Flow Status                        ; Successful - Tue May 27 13:29:55 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Fernando_piano2                             ;
 ; Top-level Entity Name              ; Fernando_piano2                             ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6F17C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 247 / 6,272 ( 4 % )                         ;
+;     Total combinational functions  ; 247 / 6,272 ( 4 % )                         ;
+;     Dedicated logic registers      ; 130 / 6,272 ( 2 % )                         ;
+; Total registers                    ; 130                                         ;
+; Total pins                         ; 6 / 180 ( 3 % )                             ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/26/2025 14:21:16 ;
+; Start date & time ; 05/27/2025 13:29:37 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Fernando_piano2     ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589204.174826207602004         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 10995770589204.174834537711752         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
@@ -94,8 +94,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4776 MB             ; 00:00:21                           ;
-; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:21                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4780 MB             ; 00:00:21                           ;
+; Fitter               ; 00:00:04     ; 1.0                     ; 5494 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:00     ; 1.0                     ; 4680 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 4753 MB             ; 00:00:02                           ;
+; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:30                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -105,6 +108,9 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; DESKTOP-4LA8V2C  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-4LA8V2C  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-4LA8V2C  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-4LA8V2C  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -112,6 +118,9 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Fernando_piano2 -c Fernando_piano2
+quartus_fit --read_settings_files=off --write_settings_files=off Fernando_piano2 -c Fernando_piano2
+quartus_asm --read_settings_files=off --write_settings_files=off Fernando_piano2 -c Fernando_piano2
+quartus_sta Fernando_piano2 -c Fernando_piano2
 
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Fernando_piano2
-Mon May 26 14:21:26 2025
+Tue May 27 13:29:48 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,7 +10,14 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +44,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon May 26 14:21:26 2025           ;
+; Analysis & Synthesis Status        ; Successful - Tue May 27 13:29:48 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Fernando_piano2                             ;
 ; Top-level Entity Name              ; Fernando_piano2                             ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 247                                         ;
+;     Total combinational functions  ; 247                                         ;
+;     Dedicated logic registers      ; 130                                         ;
+; Total registers                    ; 130                                         ;
+; Total pins                         ; 6                                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -149,11 +156,146 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
+; MUX16-1.vhd                      ; yes             ; User VHDL File                     ; C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/MUX16-1.vhd         ;         ;
+; DF_do8.vhd                       ; yes             ; User VHDL File                     ; C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_do8.vhd          ;         ;
+; DF_si.vhd                        ; yes             ; User VHDL File                     ; C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_si.vhd           ;         ;
+; DF_la.vhd                        ; yes             ; User VHDL File                     ; C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_la.vhd           ;         ;
+; DF_sol.vhd                       ; yes             ; User VHDL File                     ; C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_sol.vhd          ;         ;
+; DF_fa.vhd                        ; yes             ; User VHDL File                     ; C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_fa.vhd           ;         ;
+; DF_mi.vhd                        ; yes             ; User VHDL File                     ; C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_mi.vhd           ;         ;
+; DF_re.vhd                        ; yes             ; User VHDL File                     ; C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_re.vhd           ;         ;
+; DF_do.vhd                        ; yes             ; User VHDL File                     ; C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_do.vhd           ;         ;
+; Fernando_piano2.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/Fernando_piano2.bdf ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 247             ;
+;                                             ;                 ;
+; Total combinational functions               ; 247             ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 62              ;
+;     -- 3 input functions                    ; 24              ;
+;     -- <=2 input functions                  ; 161             ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 130             ;
+;     -- arithmetic mode                      ; 117             ;
+;                                             ;                 ;
+; Total registers                             ; 130             ;
+;     -- Dedicated logic registers            ; 130             ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 6               ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; CLK_50MHz~input ;
+; Maximum fan-out                             ; 130             ;
+; Total fan-out                               ; 901             ;
+; Average fan-out                             ; 2.32            ;
++---------------------------------------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                  ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name            ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+------------------------+--------------+
+; |Fernando_piano2                  ; 247 (0)             ; 130 (0)                   ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |Fernando_piano2                              ; Fernando_piano2        ; work         ;
+;    |divisor_frecuencia_Do8:inst2| ; 28 (28)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fernando_piano2|divisor_frecuencia_Do8:inst2 ; divisor_frecuencia_Do8 ; work         ;
+;    |divisor_frecuencia_do:inst3|  ; 32 (32)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fernando_piano2|divisor_frecuencia_do:inst3  ; divisor_frecuencia_do  ; work         ;
+;    |divisor_frecuencia_fa:inst6|  ; 31 (31)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fernando_piano2|divisor_frecuencia_fa:inst6  ; divisor_frecuencia_fa  ; work         ;
+;    |divisor_frecuencia_la:inst|   ; 32 (32)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fernando_piano2|divisor_frecuencia_la:inst   ; divisor_frecuencia_la  ; work         ;
+;    |divisor_frecuencia_mi:inst5|  ; 28 (28)             ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fernando_piano2|divisor_frecuencia_mi:inst5  ; divisor_frecuencia_mi  ; work         ;
+;    |divisor_frecuencia_re:inst4|  ; 32 (32)             ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fernando_piano2|divisor_frecuencia_re:inst4  ; divisor_frecuencia_re  ; work         ;
+;    |divisor_frecuencia_si:inst1|  ; 30 (30)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fernando_piano2|divisor_frecuencia_si:inst1  ; divisor_frecuencia_si  ; work         ;
+;    |divisor_frecuencia_sol:inst7| ; 28 (28)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fernando_piano2|divisor_frecuencia_sol:inst7 ; divisor_frecuencia_sol ; work         ;
+;    |mux_16to1_individual:inst8|   ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fernando_piano2|mux_16to1_individual:inst8   ; mux_16to1_individual   ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                            ;
++------------------------------------------+----------------------------------------------------+
+; Register name                            ; Reason for Removal                                 ;
++------------------------------------------+----------------------------------------------------+
+; divisor_frecuencia_la:inst|contador[0]   ; Merged with divisor_frecuencia_do:inst3|counter[0] ;
+; divisor_frecuencia_mi:inst5|contador[0]  ; Merged with divisor_frecuencia_do:inst3|counter[0] ;
+; divisor_frecuencia_fa:inst6|contador[0]  ; Merged with divisor_frecuencia_do:inst3|counter[0] ;
+; divisor_frecuencia_sol:inst7|contador[0] ; Merged with divisor_frecuencia_do:inst3|counter[0] ;
+; divisor_frecuencia_si:inst1|counter[0]   ; Merged with divisor_frecuencia_do:inst3|counter[0] ;
+; divisor_frecuencia_re:inst4|contador[0]  ; Merged with divisor_frecuencia_do:inst3|counter[0] ;
+; divisor_frecuencia_sol:inst7|contador[1] ; Merged with divisor_frecuencia_do:inst3|counter[1] ;
+; divisor_frecuencia_fa:inst6|contador[1]  ; Merged with divisor_frecuencia_do:inst3|counter[1] ;
+; divisor_frecuencia_si:inst1|counter[1]   ; Merged with divisor_frecuencia_do:inst3|counter[1] ;
+; Total Number of Removed Registers = 9    ;                                                    ;
++------------------------------------------+----------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 130   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 6                           ;
+; cycloneiii_ff         ; 130                         ;
+;     plain             ; 130                         ;
+; cycloneiii_lcell_comb ; 247                         ;
+;     arith             ; 117                         ;
+;         2 data inputs ; 111                         ;
+;         3 data inputs ; 6                           ;
+;     normal            ; 130                         ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 42                          ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 62                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.98                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -162,52 +304,60 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon May 26 14:21:16 2025
+    Info: Processing started: Tue May 27 13:29:36 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Fernando_piano2 -c Fernando_piano2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file mux16-1.vhd
-    Info (12022): Found design unit 1: mux_16to1_individual-Behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/MUX16-1.vhd Line: 18
-    Info (12023): Found entity 1: mux_16to1_individual File: C:/Users/TL21/Desktop/Fernando_piano2/MUX16-1.vhd Line: 4
+    Info (12022): Found design unit 1: mux_16to1_individual-Behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/MUX16-1.vhd Line: 18
+    Info (12023): Found entity 1: mux_16to1_individual File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/MUX16-1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file df_do8.vhd
-    Info (12022): Found design unit 1: divisor_frecuencia_Do8-Behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/DF_do8.vhd Line: 13
-    Info (12023): Found entity 1: divisor_frecuencia_Do8 File: C:/Users/TL21/Desktop/Fernando_piano2/DF_do8.vhd Line: 5
+    Info (12022): Found design unit 1: divisor_frecuencia_Do8-Behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_do8.vhd Line: 13
+    Info (12023): Found entity 1: divisor_frecuencia_Do8 File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_do8.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file df_si.vhd
-    Info (12022): Found design unit 1: divisor_frecuencia_si-Behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/DF_si.vhd Line: 13
-    Info (12023): Found entity 1: divisor_frecuencia_si File: C:/Users/TL21/Desktop/Fernando_piano2/DF_si.vhd Line: 5
+    Info (12022): Found design unit 1: divisor_frecuencia_si-Behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_si.vhd Line: 13
+    Info (12023): Found entity 1: divisor_frecuencia_si File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_si.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file df_la.vhd
-    Info (12022): Found design unit 1: divisor_frecuencia_la-Behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/DF_la.vhd Line: 13
-    Info (12023): Found entity 1: divisor_frecuencia_la File: C:/Users/TL21/Desktop/Fernando_piano2/DF_la.vhd Line: 5
+    Info (12022): Found design unit 1: divisor_frecuencia_la-Behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_la.vhd Line: 13
+    Info (12023): Found entity 1: divisor_frecuencia_la File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_la.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file df_sol.vhd
-    Info (12022): Found design unit 1: divisor_frecuencia_sol-Behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/DF_sol.vhd Line: 13
-    Info (12023): Found entity 1: divisor_frecuencia_sol File: C:/Users/TL21/Desktop/Fernando_piano2/DF_sol.vhd Line: 5
+    Info (12022): Found design unit 1: divisor_frecuencia_sol-Behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_sol.vhd Line: 13
+    Info (12023): Found entity 1: divisor_frecuencia_sol File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_sol.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file df_fa.vhd
-    Info (12022): Found design unit 1: divisor_frecuencia_fa-Behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/DF_fa.vhd Line: 13
-    Info (12023): Found entity 1: divisor_frecuencia_fa File: C:/Users/TL21/Desktop/Fernando_piano2/DF_fa.vhd Line: 5
+    Info (12022): Found design unit 1: divisor_frecuencia_fa-Behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_fa.vhd Line: 13
+    Info (12023): Found entity 1: divisor_frecuencia_fa File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_fa.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file df_mi.vhd
-    Info (12022): Found design unit 1: divisor_frecuencia_mi-Behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/DF_mi.vhd Line: 13
-    Info (12023): Found entity 1: divisor_frecuencia_mi File: C:/Users/TL21/Desktop/Fernando_piano2/DF_mi.vhd Line: 5
+    Info (12022): Found design unit 1: divisor_frecuencia_mi-Behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_mi.vhd Line: 13
+    Info (12023): Found entity 1: divisor_frecuencia_mi File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_mi.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file df_re.vhd
-    Info (12022): Found design unit 1: divisor_frecuencia_re-Behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/DF_re.vhd Line: 13
-    Info (12023): Found entity 1: divisor_frecuencia_re File: C:/Users/TL21/Desktop/Fernando_piano2/DF_re.vhd Line: 5
+    Info (12022): Found design unit 1: divisor_frecuencia_re-Behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_re.vhd Line: 13
+    Info (12023): Found entity 1: divisor_frecuencia_re File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_re.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file df_do.vhd
-    Info (12022): Found design unit 1: divisor_frecuencia_do-behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/DF_do.vhd Line: 13
-    Info (12023): Found entity 1: divisor_frecuencia_do File: C:/Users/TL21/Desktop/Fernando_piano2/DF_do.vhd Line: 5
+    Info (12022): Found design unit 1: divisor_frecuencia_do-behavioral File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_do.vhd Line: 13
+    Info (12023): Found entity 1: divisor_frecuencia_do File: C:/Users/TL21/Desktop/Fernando_piano2/Fernando_piano2/DF_do.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file fernando_piano2.bdf
     Info (12023): Found entity 1: Fernando_piano2
 Info (12127): Elaborating entity "Fernando_piano2" for the top level hierarchy
-Error (275046): Illegal name "bot" -- pin name already exists
-Error (275046): Illegal name "bot" -- pin name already exists
-Error (275046): Illegal name "bot" -- pin name already exists
-Warning (275011): Block or symbol "NOT" of instance "inst11" overlaps another block or symbol
-Warning (275011): Block or symbol "NOT" of instance "inst13" overlaps another block or symbol
-Warning (275011): Block or symbol "NOT" of instance "inst15" overlaps another block or symbol
-Warning (275011): Block or symbol "NOT" of instance "inst17" overlaps another block or symbol
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 5 warnings
-    Error: Peak virtual memory: 4776 megabytes
-    Error: Processing ended: Mon May 26 14:21:26 2025
-    Error: Elapsed time: 00:00:10
-    Error: Total CPU time (on all processors): 00:00:21
+Info (12128): Elaborating entity "mux_16to1_individual" for hierarchy "mux_16to1_individual:inst8"
+Info (12128): Elaborating entity "divisor_frecuencia_do" for hierarchy "divisor_frecuencia_do:inst3"
+Info (12128): Elaborating entity "divisor_frecuencia_re" for hierarchy "divisor_frecuencia_re:inst4"
+Info (12128): Elaborating entity "divisor_frecuencia_mi" for hierarchy "divisor_frecuencia_mi:inst5"
+Info (12128): Elaborating entity "divisor_frecuencia_fa" for hierarchy "divisor_frecuencia_fa:inst6"
+Info (12128): Elaborating entity "divisor_frecuencia_sol" for hierarchy "divisor_frecuencia_sol:inst7"
+Info (12128): Elaborating entity "divisor_frecuencia_la" for hierarchy "divisor_frecuencia_la:inst"
+Info (12128): Elaborating entity "divisor_frecuencia_si" for hierarchy "divisor_frecuencia_si:inst1"
+Info (12128): Elaborating entity "divisor_frecuencia_Do8" for hierarchy "divisor_frecuencia_Do8:inst2"
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 253 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 247 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4780 megabytes
+    Info: Processing ended: Tue May 27 13:29:48 2025
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:21
 
 

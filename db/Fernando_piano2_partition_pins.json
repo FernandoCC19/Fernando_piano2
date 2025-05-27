@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "BUZZER",
+					"strict" : false
+				},
+				{
+					"name" : "FA",
+					"strict" : false
+				},
+				{
+					"name" : "DO",
+					"strict" : false
+				},
+				{
+					"name" : "MI",
+					"strict" : false
+				},
+				{
+					"name" : "RE",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_50MHz",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
